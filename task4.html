@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .dialog-box {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+            margin: 10px;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .save-button {
+            width: 100%;
+            background-color:blue;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <div class="dialog-box">
+        <h2>Registration Form</h2>
+        <label class="form-label" for="first_name">First Name:</label>
+        <input class="form-input" type="text" id="first_name" name="first_name" required>
+
+        <label class="form-label" for="username">Username:</label>
+        <input class="form-input" type="text" id="username" name="username" required>
+
+        <label class="form-label" for="password">Password:</label>
+        <input class="form-input" type="password" id="password" name="password" required>
+
+        <label class="form-label" for="re_password">Re-enter Password:</label>
+        <input class="form-input" type="password" id="re_password" name="re_password" required>
+
+        <label class="form-label" for="address">Address:</label>
+        <textarea class="form-input" id="address" name="address" rows="4" required></textarea>
+
+        <label class="form-label" for="age">Age:</label>
+        <input class="form-input" type="number" id="age" name="age" min="1" required>
+
+        <label class="form-label" for="gender">Gender:</label>
+        <select class="form-input" id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <button class="save-button" type="submit">Save</button>
+    </div>
+</div>
+
+</body>
+</html>
