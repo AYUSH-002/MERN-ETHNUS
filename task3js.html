@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 3 JS</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        #calculator-form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        input[type="number"] {
+            width: 100px;
+            padding: 10px;
+            font-size: 18px;
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        input[type="button"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Calculator</h1>
+    </header>
+    <form id="calculator-form">
+        <label for="number1">Enter Number 1:</label>
+        <input type="number" id="number1" name="number1" required>
+        <label for="number2">Enter Number 2:</label>
+        <input type="number" id="number2" name="number2" required>
+        <input type="button" value="Multiply" onclick="calculate()">
+        <input type="button" value="Divide" onclick="calculate1()">
+    </form>
+    <p id="result"></p>
+    <script>
+        function calculate() {
+            var num1 = parseInt(document.getElementById("number1").value);
+            var num2 = parseInt(document.getElementById("number2").value);
+            var result = 0;
+            if (!isNaN(num1) && !isNaN(num2)) {
+                result = num1 * num2;
+                document.getElementById("result").innerHTML = "Result is: " + result;
+            } else {
+                document.getElementById("result").innerHTML = "Please enter valid numbers.";
+            }
+        }
+        function calculate1() {
+            var num1 = parseInt(document.getElementById("number1").value);
+            var num2 = parseInt(document.getElementById("number2").value);
+            var result = 0;
+            if (!isNaN(num1) && !isNaN(num2) && num2!=0) {
+                result = num1 / num2;
+                document.getElementById("result").innerHTML = "Result is: " + result;
+            } else {
+                document.getElementById("result").innerHTML = "Please enter valid numbers.";
+            }
+        }
+
+    </script>
+    <p>Made By Ayush Sharma</p>
+</body>
+
+</html>

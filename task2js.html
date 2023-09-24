@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 2 JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+    
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px 0;
+        }
+    
+        h1 {
+            font-size: 28px;
+            margin: 0;
+        }
+    
+        #calculator-form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    
+        input[type="button"] {
+            margin-top:25px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+    
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+    
+        #result {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>Sort Alphabets</h1>
+    </header>
+    <form id="calculator-form">
+        <label for="text1">Enter String:</label>
+        <input type="text" id="text1" name="text1" required>
+        <input type="button" value="Result" onclick="calculate()">
+    </form>
+    <p id="result"></p>
+    <script>
+        function calculate() 
+        {
+            var str =document.getElementById("text1").value;
+            var result;
+            if(str.length>0)
+            {
+                document.getElementById("result").innerHTML = "Expected Output: " + str.split('').sort().join('');
+            } 
+            else 
+            {
+                document.getElementById("result").innerHTML = "Please enter valid string.";
+            }
+        }
+    </script>
+    <p>Made By Ayush Sharma</p>
+</body>
+</html>
